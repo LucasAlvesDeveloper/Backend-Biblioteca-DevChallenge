@@ -30,6 +30,11 @@ app.listen(3000, () => {
     console.log('listening on port 3000')
 })
 
+app.route("/")
+	.get((req, res) => {
+		res.status(200).send("Everything's alright!")
+	})
+
 app.route("/obras/")
     .get((req, res) => {
         res.send(obrasCadastradas)
